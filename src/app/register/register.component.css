@@ -1,0 +1,13 @@
+.row{
+    padding: 1.2rem;
+    color: rgb(11, 63, 219);
+    margin-top: 1rem;
+    border-color: royalblue;
+    border-style: double;
+    border-radius: 0.5rem;
+    height: 75vh;
+}
+
+.col-12{
+    margin-left: 22rem;
+}
