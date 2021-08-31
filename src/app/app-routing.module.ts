@@ -7,6 +7,8 @@ import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -14,9 +16,11 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'manage-products',component:ManageProductsComponent},
   {path:'manage-users',component:ManageUsersComponent},
-  {path:'product-detail:id',component:ProductDetailComponent},
+  {path:'product-detail/:id',component:ProductDetailComponent},
   {path:'register',component:RegisterComponent},
-  {path:'products',component:ProductsComponent}
+  {path:'products',component:ProductsComponent},
+  {path:'user-details/:id',component:UserDetailComponent},
+  {path:'update-user/:id',component:UpdateUserComponent}
 ];
 
 @NgModule({

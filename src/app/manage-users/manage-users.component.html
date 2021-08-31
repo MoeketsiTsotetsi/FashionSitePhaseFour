@@ -1,1 +1,28 @@
-<p>manage-users works!</p>
+<div class="container">
+    <h3 class="text-center">Welcome To The User Management Portal</h3>
+    <table class="table table-striped">
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>User Type</th>
+            <th>Created At</th>
+            <th>Action </th>
+            
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.type}}</td>
+                <td>{{user.created_at}}</td>
+                <td><a [routerLink]="['/user-details',user._id]" class="btn btn-outline-info">View Details</a></td>
+                
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>

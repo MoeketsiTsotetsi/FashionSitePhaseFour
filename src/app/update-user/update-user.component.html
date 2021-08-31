@@ -1,0 +1,43 @@
+<form class="row g-3">
+    <h3 class="text-center">Update Details</h3>
+       <div class="col-md-6">
+         <label for="name" class="form-label">Full Name</label>
+         <input type="text" class="form-control" id="name" placeholder="Enter Your name" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}">
+       </div>
+       <div class="col-md-6">
+         <label for="email" class="form-label">Email</label>
+         <input type="email" class="form-control" id="email" placeholder="Enter Email" 
+         [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+       </div>
+       <div class="col-md-6">
+         <label for="userType" class="form-label">User Type</label>
+         <input type="text" class="form-control" id="userType" placeholder="Enter User Type"
+         [(ngModel)]="user.type" [ngModelOptions]="{standalone: true}">
+       </div>
+       <div class="col-md-6">
+         <label for="username" class="form-label">Username</label>
+         <input type="text" class="form-control" id="username" placeholder="Enter Your Username"
+         [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}">
+       </div>
+       <div class="col-md-6">
+         <label for="password" class="form-label">Password</label>
+         <input type="password" class="form-control" id="password" placeholder="Enter Password"
+         [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
+       </div>
+       
+       
+       <div class="col-md-6">
+         <label for="rpassword" class="form-label">Re Enter Password</label>
+         <input type="password" class="form-control" id="rpassword" placeholder="Renter Password"
+         [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
+       </div>
+       
+       <div class="buttons">
+           <div class="col-md-6">
+               <button (click)="updateUser()" type="submit" class="btn btn-outline-info ">Update Details</button> &nbsp;
+               <button type="reset" class="btn btn-outline-info ">Clear Fields</button> &nbsp;
+               
+             </div>
+       </div>
+      
+     </form>
