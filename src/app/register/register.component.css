@@ -1,10 +1,8 @@
-.row{
-    padding: 1.2rem;
-    color: rgb(11, 63, 219);
+form{
     margin-top: 1rem;
-    border-color: royalblue;
+    border-radius: .9rem;
     border-style: double;
-    border-radius: 0.5rem;
-    height: 85vh;
+    border-color: rgb(130, 200, 218);
+    padding: 1rem;
 }
 

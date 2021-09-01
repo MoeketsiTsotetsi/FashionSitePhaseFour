@@ -8,7 +8,8 @@
       <li class="list-group-item">Email : {{user.email}}</li>
       <li class="list-group-item">Username: {{user.username}}</li>
       <li class="list-group-item">User Type : {{user.type}}</li>
-      <li class="list-group-item">Created At: {{user.created_at}}</li>
+      <li class="list-group-item">Password : {{user.password}}</li>
+      
     </ul>
     <div class="card-body">
       <a [routerLink]="['/update-user',user._id]" class="btn btn-outline-info">Update User</a> &nbsp;

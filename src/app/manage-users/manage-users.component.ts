@@ -12,7 +12,7 @@ import { UserService } from '../services/user.service';
 export class ManageUsersComponent implements OnInit {
   users:User[]  = [];
   user:User = new User();
-  id :any;
+  
   constructor(private _userService:UserService,private _http:HttpClient,private _router:Router) { }
 
   ngOnInit(): void {

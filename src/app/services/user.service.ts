@@ -17,4 +17,6 @@ export class UserService {
   getUserById(id:any): Observable<User> {
       return this._http.get<User>(`http://localhost:3000/users/${id}`)
   }
+
+  
 }
