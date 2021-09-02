@@ -1,0 +1,31 @@
+<div class="container">
+    <h3 class="text-center">Enter Product Details Here</h3>
+    <form action="">
+        <div class="mb-3">
+            <label for="username" class="form-label ">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter The Name"
+            [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" placeholder="Enter The Price"
+            [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}">
+          </div>
+
+          <div class="mb-3">
+            <label for="price" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="quantity" placeholder="Enter The Quantity"
+            [(ngModel)]="product.quantity" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="imgurl" placeholder="Enter The URL image"
+            [(ngModel)]="product.image" [ngModelOptions]="{standalone: true}">
+          </div>
+    
+          <button (click)="addProduct()" class="btn btn-outline-info">Add Product</button>
+          
+    </form>
+     
+   
+  </div>

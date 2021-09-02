@@ -1,1 +1,18 @@
-<p>product-detail works!</p>
+<div class="card" style="width: 60rem;">
+    
+  <img src="{{product.image}}" alt="" width="100%" height="400vh">
+    <div class="card-body">
+
+      <h4 class="card-title">{{product.name}} Product Details</h4>
+      <p class="card-text">You can update or delete this user. NB : Check admins before deletion !!!</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Price: R {{product.price}}</li>
+      <li class="list-group-item">Quantity: {{product.quantity}}</li>
+    </ul>
+    <div class="card-body">
+      <a [routerLink]="['/update-product',product._id]" class="btn btn-outline-info">Update Product</a> &nbsp;
+      <button (click)="deleteProduct()" class="btn btn-outline-danger">Delete Product</button> &nbsp;
+      <a routerLink="/manage-products" class="btn btn-outline-success">Back To Products</a>
+    </div>
+  </div>

@@ -11,17 +11,29 @@
       <li class="nav-item">
         <a routerLink="products" class="nav-link" href="#">Products</a>
       </li>
-      <li class="nav-item">
-        <a routerLink="manage-products" class="nav-link" >Manage Products</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="manage-users" class="nav-link" >Manage Users</a>
-      </li>
+
+      
+        <li class="nav-item">
+          <a routerLink="manage-products" class="nav-link" >Manage Products</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="manage-users" class="nav-link" >Manage Users</a>
+        </li>
+      
+     
 
       <form class="form-inline">
+        <div class="loginbtns" *ngIf="!loginStatus()">
           <button routerLink="login" class="btn btn-outline-light">Login</button> &nbsp;
           <button routerLink="register" class="btn btn-outline-light">Register</button> &nbsp;
-          <button routerLink="register" class="btn btn-outline-light">Logout</button>
+        </div>
+
+          <div *ngIf="loginStatus()">
+            <button routerLink="register" class="btn btn-outline-light">Logout</button>
+          </div>
+            
+          
+          
       </form>
     </ul>
   </div>

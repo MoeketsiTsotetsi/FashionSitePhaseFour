@@ -1,1 +1,23 @@
-<p>manage-products works!</p>
+<div class="container">
+    <h3 class="text-center">Welcome To The Product Management Portal</h3>
+    <table class="table table-striped">
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action </th>
+            
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.quantity}}</td>
+                <td><a [routerLink]="['/product-detail',product._id]" class="btn btn-outline-info">View Details</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a routerLink="/add-product" class="btn btn-outline-info"> Add Product</a>
+</div>
