@@ -1,1 +1,22 @@
-<p>update-product works!</p>
+<form action="">
+    <h3 class="text-center">Enter New Product Details</h3>
+    <label for="name" class="form-label">Name</label>
+         <input type="text" class="form-control" id="name" placeholder="Enter The Name"
+         [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}">
+
+    <label for="name" class="form-label">Price</label>
+         <input type="text" class="form-control" id="price" placeholder="Enter The Price"
+         [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}">
+
+    <label for="name" class="form-label">Quantity</label>
+         <input type="text" class="form-control" id="quantity" placeholder="Enter The Quantity"
+         [(ngModel)]="product.quantity" [ngModelOptions]="{standalone: true}">
+    <label for="name" class="form-label">Name</label>
+         <input type="text" class="form-control" id="image" placeholder="Enter The image Url"
+         [(ngModel)]="product.image" [ngModelOptions]="{standalone: true}">
+
+         <div>
+            <button (click)="updateProduct()" class="btn btn-outline-info">Update Product</button>
+         </div>
+         
+</form>
