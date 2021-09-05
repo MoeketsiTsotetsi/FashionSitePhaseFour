@@ -19,9 +19,9 @@
                     </table>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <a [routerLink]="['/product-detail',product._id]" class="btn btn-sm btn-outline-secondary">View Details</a>
-                            <a [routerLink]="['/cart',product._id]" class="btn btn-sm btn-outline-secondary">Buy
-                                Now</a>
+                            <!-- <a [routerLink]="['/product-detail',product._id]" class="btn btn-sm btn-outline-secondary">View Details</a> -->
+                            <button type="button" (click)="buyNow(product)" class="btn btn-sm btn-outline-secondary">Buy
+                                Now</button>
                         </div>
                         <small class="text-muted">{{product.quantity}} items are left.</small>
                     </div>
