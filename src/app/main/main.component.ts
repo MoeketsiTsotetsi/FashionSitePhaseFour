@@ -8,10 +8,13 @@ import { AuthGuardService } from '../services/auth-guard.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  isadmin: Boolean = false;
   constructor(private _authGuardService:AuthGuardService,private _router:Router) { }
 
   ngOnInit(): void {
+  this.isadmin = this.adminStatus();
+  console.log(this.isadmin);
+  
   }
 
   loginStatus() {

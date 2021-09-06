@@ -23,22 +23,26 @@
           <a routerLink="manage-users" class="nav-link" >Manage Users</a>
         </li>
       
+   
+      
+      
+      
      
 
-      <form class="form-inline">
-        <div class="loginbtns" *ngIf="!loginStatus()">
-          <button routerLink="login" class="btn btn-outline-light">Login</button> &nbsp;
-          <button routerLink="register" class="btn btn-outline-light">Register</button> &nbsp;
-        </div>
-
-          <div *ngIf="loginStatus()">
-            <button (click)="logout()" class="btn btn-outline-light">Logout</button>
-          </div>
-            
-          
-          
-      </form>
+       
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      
+      <div *ngIf="!loginStatus()">
+        <button routerLink="/login" class="btn btn-outline-light my-2 my-sm-0" >login</button> &nbsp;
+        <button routerLink="/register" class="btn btn-outline-light my-2 my-sm-0" >Register</button> &nbsp;
+      </div>
+      
+      <div *ngIf="loginStatus()">
+        <button (click)="logout()" class="btn btn-outline-light my-2 my-sm-0" >Logout</button>
+      </div>
+      
+    </form>
   </div>
 </nav>
 

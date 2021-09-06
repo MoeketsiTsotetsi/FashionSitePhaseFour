@@ -10,6 +10,7 @@ import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuardService } from './services/auth-guard.service';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
@@ -18,8 +19,8 @@ const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
-  {path:'manage-products',component:ManageProductsComponent},
-  {path:'manage-users',component:ManageUsersComponent},
+  {path:'manage-products',component:ManageProductsComponent,canActivate:[AuthGuardService]},
+  {path:'manage-users',component:ManageUsersComponent,canActivate:[AuthGuardService]},
   {path:'product-detail/:id',component:ProductDetailComponent},
   {path:'register',component:RegisterComponent},
   {path:'products',component:ProductsComponent},
