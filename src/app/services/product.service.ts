@@ -7,14 +7,14 @@ import { Product } from '../models/product';
   providedIn: 'root'
 })
 export class ProductService {
-
+  backend_url = "/api";
   constructor(private _http: HttpClient) { }
 
   getProducts(): Observable<Product[]> {
-      return this._http.get<Product[]>(`http://localhost:3000/products/`)
+      return this._http.get<Product[]>(this.backend_url+"/products/");
   }
 
   getProductById(id:any): Observable<Product> {
-      return this._http.get<Product>(`http://localhost:3000/products/${id}`)
+      return this._http.get<Product>(this.backend_url+"/products/"+id);
   }
 }

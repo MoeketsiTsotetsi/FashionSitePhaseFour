@@ -9,13 +9,14 @@ import { User } from '../models/user';
 export class UserService {
 
   constructor(private _http: HttpClient) { }
+  backend_url = "/api";
 
   getUsers(): Observable<User[]> {
-      return this._http.get<User[]>(`http://localhost:3000/users/`)
+      return this._http.get<User[]>(this.backend_url+"/users/");
   }
 
   getUserById(id:any): Observable<User> {
-      return this._http.get<User>(`http://localhost:3000/users/${id}`)
+      return this._http.get<User>(this.backend_url+"/users/"+id);
   }
 
   

@@ -12,6 +12,7 @@ import { ProductService } from '../services/product.service';
 })
 export class UpdateProductComponent implements OnInit {
 product:Product = new Product();
+backend_url = "/api";
 id:any;
   constructor(private _route:ActivatedRoute,private _http:HttpClient,private _productService:ProductService,
     private _router:Router) { }
@@ -27,7 +28,7 @@ id:any;
   }
 
   updateProduct(){
-    this._http.patch(`http://localhost:3000/products/` + this.id,this.product).subscribe(result =>{
+    this._http.patch(this.backend_url+"/products/" + this.id,this.product).subscribe(result =>{
       alert('Product Successfully Updated');
       this._router.navigate(['/products']);
 

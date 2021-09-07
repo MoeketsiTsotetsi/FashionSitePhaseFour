@@ -13,6 +13,7 @@ import { ProductService } from '../services/product.service';
 export class ProductDetailComponent implements OnInit {
    id :any;
    product:Product = new Product();
+   backend_url = "/api";
 
   constructor(private _route:ActivatedRoute,private _productService:ProductService,
     private _http:HttpClient,private _router:Router) { }
@@ -28,7 +29,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   deleteProduct(){
-    this._http.delete(`http://localhost:3000/products/${this.id}`).subscribe(result =>{
+    this._http.delete(this.backend_url+"/products/"+this.id).subscribe(result =>{
       alert('Product Deleted Sucessfully');
       this._router.navigate(['/manage-products']);
     })

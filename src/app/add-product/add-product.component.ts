@@ -10,6 +10,7 @@ import { Product } from '../models/product';
 })
 export class AddProductComponent implements OnInit {
   product:Product = new Product();
+  backend_url = "/api";
   
   constructor(private _http:HttpClient,private _router:Router) { }
 
@@ -17,7 +18,7 @@ export class AddProductComponent implements OnInit {
   }
 
   addProduct(){
-    this._http.post(`http://localhost:3000/products/`,this.product).subscribe(result =>{
+    this._http.post(this.backend_url +"/products/",this.product).subscribe(result =>{
       console.log(result);
       alert('Product Added Successfully');
       this._router.navigate(['/manage-products']);

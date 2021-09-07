@@ -13,6 +13,7 @@ export class UpdateUserComponent implements OnInit {
 
   id :any;
  user:User = new User();
+ backend_url = "/api";
 
   constructor(private _route:ActivatedRoute,private _userService:UserService,private _http:HttpClient,
     private _router:Router) { }
@@ -30,7 +31,7 @@ export class UpdateUserComponent implements OnInit {
   }
 
   updateUser(){
-    this._http.patch(`http://localhost:3000/users/` + this.id,this.user).subscribe(result =>{
+    this._http.patch(this.backend_url+"/users/" + this.id,this.user).subscribe(result =>{
       alert('User Updated Successfully');
      console.log(result);
      

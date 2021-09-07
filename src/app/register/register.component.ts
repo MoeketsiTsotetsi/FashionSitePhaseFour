@@ -11,6 +11,7 @@ import { User } from '../models/user';
 export class RegisterComponent implements OnInit {
 
   user:User = new User;
+  backend_url = "/api";
   constructor(private _http:HttpClient,private _router:Router) { }
 
   ngOnInit(): void {
@@ -18,7 +19,7 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser(){
-    this._http.post('http://localhost:3000/users', this.user).subscribe(result => {
+    this._http.post(this.backend_url+"/users", this.user).subscribe(result => {
       console.log(result);
       alert('You are registered successfully.');
       this._router.navigate(['/login']);

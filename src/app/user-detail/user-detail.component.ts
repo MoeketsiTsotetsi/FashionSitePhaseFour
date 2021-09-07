@@ -12,6 +12,7 @@ import { UserService } from '../services/user.service';
 export class UserDetailComponent implements OnInit {
   id:any;
   user:User = new User();
+  backend_url:String = "/api";
   constructor(private _route:ActivatedRoute,private _userService:UserService,private _http:HttpClient,
     private _router:Router) { }
 
@@ -31,7 +32,7 @@ export class UserDetailComponent implements OnInit {
 
   deleteUser(){
     
-    this._http.delete(`http://localhost:3000/users/` + this.id).subscribe(result =>{
+    this._http.delete(this.backend_url+"/users/" + this.id).subscribe(result =>{
      this._router.navigate(['/manage-users']);
     },error =>{
       console.log(error);
